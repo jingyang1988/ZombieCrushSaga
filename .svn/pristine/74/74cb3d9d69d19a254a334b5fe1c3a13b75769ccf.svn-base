@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    The properties in this file are specific to the zomjong flavor of the game.
+-->
+<properties>
+    <property_list>    
+        <property name="GAME_TITLE_TEXT"            value="ZombieCrush"></property>
+        <property name="WINDOW_ICON"                value="./ZombieCrush/ICON.png"></property>
+        
+        <!-- BIG, FULL VIEWPORT BACKGROUND SCREEN IMAGES -->
+        <property name="SPLASH_SCREEN_IMAGE_NAME"   value="./ZombieCrush/splashscreen.png"></property>
+        <property name="SAGA_SCREEN_IMAGE_NAME"   value="./ZombieCrush/sagascreen.png"></property>
+        <property name="GAME_BACKGROUND_IMAGE_NAME" value="./ZombieCrush/Background.png"></property>
+        <property name="LEVEL_SCORE_SCREEN_IMAGE_NAME"   value="./ZombieCrush/scorescreen.png"></property>
+        
+        <!-- DIALOG IMAGES -->
+        <property name="WIN_DIALOG_IMAGE_NAME"             value="./ZombieCrush/UIZomjongWinDialog.png"></property>
+        <property name="LOSS_DIALOG_IMAGE_NAME"             value="./ZombieCrush/UIZomjongLossDialog.png"></property>
+        
+        <!-- GAME SCREEN NORTH TOOLBAR UI IMAGES -->
+        <property name="PLAYGAME_BUTTON_IMAGE_NAME"              value="./ZombieCrush/PLAY.png"></property>
+        <property name="PLAYGAME_BUTTON_MOUSE_OVER_IMAGE_NAME"   value="./ZombieCrush/playmouseover.png"></property>
+        <property name="RESETGAME_BUTTON_IMAGE_NAME"              value="./ZombieCrush/RESET.png"></property>
+        <property name="RESETGAME_BUTTON_MOUSE_OVER_IMAGE_NAME"   value="./ZombieCrush/RESETmouseover.png"></property>
+        <property name="QUITGAME_BUTTON_IMAGE_NAME"            value="./ZombieCrush/quit.png"></property>
+        <property name="QUITGAME_BUTTON_MOUSE_OVER_IMAGE_NAME" value="./ZombieCrush/quitmouseOver.png"></property>
+        <property name="PLAYLEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/start.png"></property>
+        <property name="PLAYLEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/startmouseover.png"></property>
+        <property name="QUITLEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/quit.png"></property>
+        <property name="QUITLEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/quitmouseOver.png"></property>
+        <property name="CLOSELEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/close.png"></property>
+        <property name="CLOSELEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/closemouseOver.png"></property>
+        <property name="SCROLLUP_BUTTON_IMAGE_NAME"             value="./ZombieCrush/scrollup.png"></property>
+        <property name="SCROLLUP_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/scrollupMOUSEOVER.png"></property>
+         <property name="SCROLLDOWN_BUTTON_IMAGE_NAME"             value="./ZombieCrush/scrolldown.png"></property>
+        <property name="SCROLLDOWN_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/scrolldownMOUSEOVER.png"></property>
+        <property name="CLOSESAGA_BUTTON_IMAGE_NAME"            value="./ZombieCrush/quit.png"></property>
+        <property name="CLOSESAGA_BUTTON_MOUSE_OVER_IMAGE_NAME" value="./ZombieCrush/quitmouseOver.png"></property>
+        <property name="SELECTLEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/1.png"></property>
+        <property name="SELECTLEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/1mouseover.png"></property>
+        <property name="SCORE_IMAGE_NAME"  value="./ZombieCrush/score.png"></property>
+        <property name="MOVE_IMAGE_NAME"  value="./ZombieCrush/move.png"></property>
+        <property name="BLANK_TILE_IMAGE_NAME"              value="./ZombieCrush/BlankTile.png"></property>
+        <property name="BLANK_TILE_SELECTED_IMAGE_NAME"     value="./ZombieCrush/UIZomjongBlankTileSelected.png"></property>
+        <property name="BLANK_TILE_INCORRECTLY_SELECTED_IMAGE_NAME"     value="./ZombieCrush/UIZomjongBlankTileINSelected.png"></property>
+    </property_list>
+    
+    <property_options_list>
+          <property_options name="LEVEL_OPTIONS">
+            <option>./ZombieCrush/level1.zom</option>
+            <option>./ZombieCrush/level2.zom</option>
+            <option>./ZombieCrush/level3.zom</option>
+            <option>./ZombieCrush/level4.zom</option>
+            <option>./ZombieCrush/level5.zom</option>
+            <option>./ZombieCrush/level6.zom</option>
+            <option>./ZombieCrush/level7.zom</option>
+            <option>./ZombieCrush/level8.zom</option>
+            <option>./ZombieCrush/level9.zom</option>
+
+           </property_options>
+           <property_options name="LEVEL_IMAGE_OPTIONS">
+            <option>./ZombieCrush/1.png</option>
+            <option>./ZombieCrush/2.png</option>
+            <option>./ZombieCrush/3.png</option>
+            <option>./ZombieCrush/4.png</option>
+            <option>./ZombieCrush/5.png</option>
+            <option>./ZombieCrush/6.png</option>
+            <option>./ZombieCrush/7.png</option>
+            <option>./ZombieCrush/8.png</option>
+            <option>./ZombieCrush/9.png</option>
+            
+          </property_options>
+          <property_options name="LEVEL_MOUSE_OVER_IMAGE_OPTIONS">
+          <option>./ZombieCrush/1mouseover.png</option>
+          <option>./ZombieCrush/2mouseover.png</option>
+          <option>./ZombieCrush/3mouseover.png</option>
+          <option>./ZombieCrush/4mouseover.png</option>
+          <option>./ZombieCrush/5mouseover.png</option>
+          <option>./ZombieCrush/6mouseover.png</option
+          <option>./ZombieCrush/7mouseover.png</option>
+          <option>./ZombieCrush/8mouseover.png</option>
+          <option>./ZombieCrush/9mouseover.png</option>
+
+
+           </property_options>
+           <property_options name="BASIC_TILES">
+            <option>./ZombieCrush/TileZombieFootball.png</option>
+            <option>./ZombieCrush/TileZombieBackupDancer.png</option>
+            <option>./ZombieCrush/TileZombieFlag.png</option>
+            <option>./ZombieCrush/TileZombieBuckethead.png</option>
+            <option>./ZombieCrush/TileZombieBalloon.png</option>
+            <option>./ZombieCrush/TileZombieConehead.png</option>
+            
+          </property_options>
+          <property_options name="SPECIAL_TILES">
+            <option>./ZombieCrush/TileZombieJalapeno.png</option>
+            <option>./ZombieCrush/TileZombiePeashooter.png</option>
+            <option>./ZombieCrush/TileZombieSquash.png</option>
+
+    </property_options>
+    </property_options_list>
+</properties>
+
+
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    The properties in this file are specific to the zomjong flavor of the game.
+-->
+<properties>
+    <property_list>    
+        <property name="GAME_TITLE_TEXT"            value="Zomjong Solitaire"></property>
+        <property name="WINDOW_ICON"                value="./ZombieCrush/TileZombieGigaGargantuar.png"></property>
+        
+        <!-- BIG, FULL VIEWPORT BACKGROUND SCREEN IMAGES -->
+        <property name="SPLASH_SCREEN_IMAGE_NAME"   value="./ZombieCrush/spalshscreen.png"></property>
+         <property name="SAGA_SCREEN_IMAGE_NAME"   value="./ZombieCrush/sagascreen.png"></property>
+        <property name="GAME_BACKGROUND_IMAGE_NAME" value="./ZombieCrush/Background.png"></property>
+        <property name="LEVEL_SCORE_SCREEN_IMAGE_NAME"   value="./ZombieCrush/scorescreen.png"></property>
+        
+        <!-- GAME SCREEN NORTH TOOLBAR UI IMAGES -->
+        <property name="PLAYGAME_BUTTON_IMAGE_NAME"              value="./ZombieCrush/play.jpg"></property>
+        <property name="PLAYGAME_BUTTON_MOUSE_OVER_IMAGE_NAME"   value="./ZombieCrush/playmouseover.jpg"></property>
+        <property name="RESETGAME_BUTTON_IMAGE_NAME"              value="./ZombieCrush/reset.png"></property>
+        <property name="RESETGAME_BUTTON_MOUSE_OVER_IMAGE_NAME"   value="./ZombieCrush/resetMouseOver.png"></property>
+        <property name="QUITGAME_BUTTON_IMAGE_NAME"            value="./ZombieCrush/quit.png"></property>
+        <property name="QUITGAME_BUTTON_MOUSE_OVER_IMAGE_NAME" value="./ZombieCrush/quitmouseOver.png"></property>
+        <property name="PLAYLEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/start.png"></property>
+        <property name="PLAYLEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/startmouseover.png"></property>
+        <property name="QUITLEVEL_IMAGE_NAME"             value="./ZombieCrush/quit.png"></property>
+        <property name="QUITLEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/quitmouseOver.png"></property>
+        <property name="CLOSELEVEL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/close.png"></property>
+        <property name="CLOSELEVEL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/closemouseOver.png"></property>
+        <property name="SCROLL_BUTTON_IMAGE_NAME"             value="./ZombieCrush/scroll.png"></property>
+        <property name="SCROLL_BUTTON_MOUSE_OVER_IMAGE_NAME"  value="./ZombieCrush/scrollMOUSEOVER.png"></property>
+
+
+        
+    </property_list>
+    <property_options_list>
+        <property_options name="LEVEL_OPTIONS">
+            <option>./ZombieCrush/Coliseum.zom</option>
+            
+        </property_options>
+        <property_options name="LEVEL_IMAGE_OPTIONS">
+            <option>./ZombieCrush/Level1.png</option>
+           
+           
+        </property_options>
+        <property_options name="LEVEL_MOUSE_OVER_IMAGE_OPTIONS">
+            <option>./ZombieCrush/Level1MouseOver.png</option>
+          
+
+
+    </property_options_list>
+</properties>
+
+
+

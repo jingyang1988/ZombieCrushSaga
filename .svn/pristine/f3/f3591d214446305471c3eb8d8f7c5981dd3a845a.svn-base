@@ -1,0 +1,163 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package zombiecrush.ui;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.text.NumberFormat;
+import javax.swing.JPanel;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import mini_game.MiniGame;
+import mini_game.Sprite;
+import mini_game.SpriteType;
+import zombiecrush.data.ZombieCrushDataModel;
+import zombiecrush.ZombieCrush.ZombieCrushPropertyType;
+import static zombiecrush.ZombieCrushConstants.*;
+/**
+ *
+ * @author Jing
+ */
+public class ZombieCrushPanel extends JPanel{
+    // THIS IS ACTUALLY OUR Mahjong Solitaire APP, WE NEED THIS
+    // BECAUSE IT HAS THE GUI STUFF THAT WE NEED TO RENDER
+    private MiniGame game;
+    private ZombieCrushMiniGame xgame;
+    
+    // AND HERE IS ALL THE GAME DATA THAT WE NEED TO RENDER
+    private ZombieCrushDataModel data;
+    
+    // WE'LL USE THIS TO FORMAT SOME TEXT FOR DISPLAY PURPOSES
+    private NumberFormat numberFormatter;
+ 
+    public ZombieCrushPanel(ZombieCrushMiniGame initGame, ZombieCrushDataModel initData)
+    {
+        game = initGame;
+        data = initData;
+        numberFormatter = NumberFormat.getNumberInstance();
+        numberFormatter.setMinimumFractionDigits(3);
+        numberFormatter.setMaximumFractionDigits(3);
+    }
+      @Override
+    public void paintComponent(Graphics g)
+    {
+        try
+        {
+            // MAKE SURE WE HAVE EXCLUSIVE ACCESS TO THE GAME DATA
+            game.beginUsingData();
+        
+            // CLEAR THE PANEL
+            super.paintComponent(g);
+        
+            // RENDER THE BACKGROUND, WHICHEVER SCREEN WE'RE ON
+            renderBackground(g);
+            // AND THE BUTTONS AND DECOR
+            renderGUIControls(g);
+            renderStats(g);
+     
+        
+        }
+        finally
+        {
+            // RELEASE THE LOCK
+            game.endUsingData();    
+        }
+    }
+    public void renderBackground(Graphics g)
+    {
+        String s=((ZombieCrushMiniGame)game).getCurrentScreenState();
+        //if(s.equals("SAGA_SCREEN_STATE")){
+        //Sprite bg = game.getGUIDecor().get("SAGASCREEN_TYPE");
+            //renderSprite(g, bg);
+        
+    //}
+        // THERE IS ONLY ONE CURRENTLY SET
+        //if(xgame.getCurrentScreenState().equals("SAGA_SCREEN_STATE")){
+            //Sprite bg = game.getGUIDecor().get("SAGASCREEN_TYPE");
+            //renderSprite(g, bg);     
+        //}
+       
+            Sprite bg = game.getGUIDecor().get("BACKGROUND_TYPE");
+            renderSprite(g, bg);
+ 
+         
+    }
+        public void renderGUIControls(Graphics g)
+    {
+        // GET EACH DECOR IMAGE ONE AT A TIME
+        Collection<Sprite> decorSprites = game.getGUIDecor().values();
+        for (Sprite s : decorSprites)
+        {
+            renderSprite(g, s);
+        }
+        
+        // AND NOW RENDER THE BUTTONS
+        Collection<Sprite> buttonSprites = game.getGUIButtons().values();
+        for (Sprite s : buttonSprites)
+        {
+            renderSprite(g, s);
+        }
+    }
+    /**
+     * Renders the game dialog boxes.
+     * 
+     * @param g This panel's graphics context.
+     */
+    public void renderDialogs(Graphics g)
+    {
+        // GET EACH DECOR IMAGE ONE AT A TIME
+        Collection<Sprite> dialogSprites = game.getGUIDialogs().values();
+        for (Sprite s : dialogSprites)
+        {
+            // RENDER THE DIALOG, NOTE IT WILL ONLY DO IT IF IT'S VISIBLE
+            renderSprite(g, s);
+        }
+    }
+     public void renderStats(Graphics g){
+         String s=((ZombieCrushMiniGame)game).getCurrentScreenState();
+         if(s.equals(LEVEL_SCORE_SCREEN_STATE)){
+      g.setColor(DEBUG_TEXT_COLOR);
+             g.setFont(TEXT_DISPLAY_FONT);
+            String level = "LEVEL1";
+            int x = 1;
+            int y = 100;
+            g.drawString(level, x, y);
+            g.setColor(DEBUG_TEXT_COLOR);
+            g.setFont(TEXT_DISPLAY_FONT);
+            
+            String score="SCORE:";
+             int a = 1;
+             int b = 200;
+             g.drawString(score, a, b);
+            
+            g.setColor(DEBUG_TEXT_COLOR);
+            g.setFont(TEXT_DISPLAY_FONT);
+            String star="STARS:";
+             int c = 1;
+             int d = 300;
+             g.drawString(star, c, d);
+             
+             g.setColor(DEBUG_TEXT_COLOR);
+            g.setFont(TEXT_DISPLAY_FONT);
+            String ins="INSTRUCTIONS:"+"\n";
+            ins+="GET 10000 POINTS!";
+             int e = 400;
+             int f = 450;
+             g.drawString(ins, e, f);
+             
+         }
+     }
+    public void renderSprite(Graphics g, Sprite s)
+    {
+        // ONLY RENDER THE VISIBLE ONES
+        if (!s.getState().equals("INVISIBLE_STATE"))
+        {
+            SpriteType bgST = s.getSpriteType();
+            Image img = bgST.getStateImage(s.getState());
+            g.drawImage(img, (int)s.getX(), (int)s.getY(), bgST.getWidth(), bgST.getHeight(), null); 
+        }
+    }
+}

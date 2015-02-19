@@ -1,0 +1,101 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package zombiecrush.data;
+import zombiecrush.ui.ZombieCrushTile;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.GregorianCalendar;
+import java.util.Iterator;
+import zombiecrush.ZombieCrush.ZombieCrushPropertyType;
+import mini_game.MiniGame;
+import mini_game.MiniGameDataModel;
+import mini_game.SpriteType;
+import properties_manager.PropertiesManager;
+import static zombiecrush.ZombieCrushConstants.*;
+import zombiecrush.ui.ZombieCrushMiniGame;
+import zombiecrush.ui.ZombieCrushPanel;
+
+/**
+ *
+ * @author Jing
+ */
+public class ZombieCrushDataModel extends MiniGameDataModel{
+    // THIS CLASS HAS A REFERERENCE TO THE MINI GAME SO THAT IT
+    // CAN NOTIFY IT TO UPDATE THE DISPLAY WHEN THE DATA MODEL CHANGES
+    private MiniGame miniGame;
+    
+    // THE LEVEL GRID REFERS TO THE LAYOUT FOR A GIVEN LEVEL, MEANING
+    // HOW MANY TILES FIT INTO EACH CELL WHEN FIRST STARTING A LEVEL
+    private int[][] levelGrid;
+    
+    // LEVEL GRID DIMENSIONS
+    private int gridColumns;
+    private int gridRows;
+    
+    // THIS STORES THE TILES ON THE GRID DURING THE GAME
+    private ArrayList<ZombieCrushTile>[][] tileGrid;
+    
+    // THESE ARE THE TILES THE PLAYER HAS MATCHED
+    private ArrayList<ZombieCrushTile> stackTiles;
+    
+    // THESE ARE THE TILES THAT ARE MOVING AROUND, AND SO WE HAVE TO UPDATE
+    private ArrayList<ZombieCrushTile> movingTiles;
+    
+    // THIS IS A SELECTED TILE, MEANING THE FIRST OF A PAIR THE PLAYER
+    // IS TRYING TO MATCH. THERE CAN ONLY BE ONE OF THESE AT ANY TIME
+    private ZombieCrushTile selectedTile;
+    
+    // THE INITIAL LOCATION OF TILES BEFORE BEING PLACED IN THE GRID
+    private int unassignedTilesX;
+    private int unassignedTilesY;
+    
+    // THESE ARE USED FOR TIMING THE GAME
+    private GregorianCalendar startTime;
+    private GregorianCalendar endTime;
+    
+    // THE REFERENCE TO THE FILE BEING PLAYED
+    private String currentLevel;
+
+    /**
+     * Constructor for initializing this data model, it will create
+     * the data structures for storing tiles, but not the tile grid
+     * itself, that is dependent of file loading, and so should be
+     * subsequently initialized.
+     * 
+     * @param initMiniGame The Mahjong game UI.
+     */
+    public ZombieCrushDataModel(MiniGame initMiniGame)
+    {
+        // KEEP THE GAME FOR LATER
+        miniGame = initMiniGame;
+        
+        // INIT THESE FOR HOLDING MATCHED AND MOVING TILES
+        stackTiles = new ArrayList();
+        movingTiles = new ArrayList();
+    }
+
+    @Override
+    public void checkMousePressOnSprites(MiniGame mg, int i, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void reset(MiniGame mg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateAll(MiniGame mg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateDebugText(MiniGame mg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+}
